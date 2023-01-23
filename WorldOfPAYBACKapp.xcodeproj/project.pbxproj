@@ -22,6 +22,7 @@
 		8AA6B92B297F393F0080354B /* TransactionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B92A297F393F0080354B /* TransactionCoordinator.swift */; };
 		8AA6B92D297F39830080354B /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B92C297F39830080354B /* TransactionsViewModel.swift */; };
 		8AA6B930297F3ADB0080354B /* TranscationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B92F297F3ADB0080354B /* TranscationCell.swift */; };
+		8AA6B933297F485A0080354B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B932297F485A0080354B /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		8AA6B92A297F393F0080354B /* TransactionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCoordinator.swift; sourceTree = "<group>"; };
 		8AA6B92C297F39830080354B /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
 		8AA6B92F297F3ADB0080354B /* TranscationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscationCell.swift; sourceTree = "<group>"; };
+		8AA6B932297F485A0080354B /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8AA6B91F297F33940080354B /* Data+Ext.swift */,
+				8AA6B932297F485A0080354B /* String+Ext.swift */,
 			);
 			path = "Helper + Extensions";
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				8AA6B918297F32BE0080354B /* NetworkManager.swift in Sources */,
 				8AA6B900297F30D30080354B /* AppDelegate.swift in Sources */,
 				8AA6B930297F3ADB0080354B /* TranscationCell.swift in Sources */,
+				8AA6B933297F485A0080354B /* String+Ext.swift in Sources */,
 				8AA6B902297F30D30080354B /* SceneDelegate.swift in Sources */,
 				8AA6B92B297F393F0080354B /* TransactionCoordinator.swift in Sources */,
 				8AA6B91E297F33750080354B /* JsonLoader.swift in Sources */,

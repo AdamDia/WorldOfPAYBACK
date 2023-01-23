@@ -14,7 +14,7 @@ struct TransactionCell: View {
     var body: some View {
         
         VStack(alignment: .leading){
-            Text("\(transaction.transactionDetail.bookingDate)")
+            Text("\(transaction.transactionDetail.bookingDate.dateStrFormatter())")
                 .foregroundColor(Color.gray)
                 .font(.callout)
                 .fontWeight(.light)

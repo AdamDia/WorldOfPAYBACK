@@ -24,16 +24,13 @@ final class TransactionsViewModel: ObservableObject {
         isLoading = true
         networkManager.getTransactions{ [weak self] result in
             guard let self = self else { return }
-            DispatchQueue.main.async {
                 self.isLoading = false
-                
                 switch result {
                 case .success(let transactions):
                     self.transactions = transactions.sorted(by: {$0.transactionDetail.bookingDate.compare($1.transactionDetail.bookingDate) == .orderedDescending})
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
-            }
         }
     }
 }
