@@ -17,6 +17,11 @@
 		8AA6B91E297F33750080354B /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B91D297F33750080354B /* JsonLoader.swift */; };
 		8AA6B920297F33940080354B /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B91F297F33940080354B /* Data+Ext.swift */; };
 		8AA6B922297F33D70080354B /* NetworkAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B921297F33D70080354B /* NetworkAppError.swift */; };
+		8AA6B925297F38D90080354B /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B924297F38D90080354B /* ApplicationCoordinator.swift */; };
+		8AA6B928297F39210080354B /* TransactionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B927297F39210080354B /* TransactionsList.swift */; };
+		8AA6B92B297F393F0080354B /* TransactionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B92A297F393F0080354B /* TransactionCoordinator.swift */; };
+		8AA6B92D297F39830080354B /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B92C297F39830080354B /* TransactionsViewModel.swift */; };
+		8AA6B930297F3ADB0080354B /* TranscationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B92F297F3ADB0080354B /* TranscationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		8AA6B91D297F33750080354B /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
 		8AA6B91F297F33940080354B /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
 		8AA6B921297F33D70080354B /* NetworkAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAppError.swift; sourceTree = "<group>"; };
+		8AA6B924297F38D90080354B /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		8AA6B927297F39210080354B /* TransactionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsList.swift; sourceTree = "<group>"; };
+		8AA6B92A297F393F0080354B /* TransactionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCoordinator.swift; sourceTree = "<group>"; };
+		8AA6B92C297F39830080354B /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		8AA6B92F297F3ADB0080354B /* TranscationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +74,12 @@
 		8AA6B8FE297F30D30080354B /* WorldOfPAYBACKapp */ = {
 			isa = PBXGroup;
 			children = (
-				8AA6B913297F31DB0080354B /* Resources */,
+				8AA6B923297F38B80080354B /* AppCoordinator */,
+				8AA6B926297F38FE0080354B /* App Story */,
 				8AA6B919297F32F70080354B /* DataModel */,
 				8AA6B91C297F333E0080354B /* Helper + Extensions */,
 				8AA6B916297F32B20080354B /* Network */,
+				8AA6B913297F31DB0080354B /* Resources */,
 			);
 			path = WorldOfPAYBACKapp;
 			sourceTree = "<group>";
@@ -87,7 +99,7 @@
 		8AA6B916297F32B20080354B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				8AA6B914297F322B0080354B /* PBTransactions.json */,
+				8AA6B931297F46A30080354B /* JSON */,
 				8AA6B917297F32BE0080354B /* NetworkManager.swift */,
 				8AA6B921297F33D70080354B /* NetworkAppError.swift */,
 			);
@@ -105,10 +117,53 @@
 		8AA6B91C297F333E0080354B /* Helper + Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8AA6B91D297F33750080354B /* JsonLoader.swift */,
 				8AA6B91F297F33940080354B /* Data+Ext.swift */,
 			);
 			path = "Helper + Extensions";
+			sourceTree = "<group>";
+		};
+		8AA6B923297F38B80080354B /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8AA6B924297F38D90080354B /* ApplicationCoordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		8AA6B926297F38FE0080354B /* App Story */ = {
+			isa = PBXGroup;
+			children = (
+				8AA6B929297F392E0080354B /* Transactions */,
+			);
+			path = "App Story";
+			sourceTree = "<group>";
+		};
+		8AA6B929297F392E0080354B /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				8AA6B92E297F3AD10080354B /* Cell */,
+				8AA6B92A297F393F0080354B /* TransactionCoordinator.swift */,
+				8AA6B927297F39210080354B /* TransactionsList.swift */,
+				8AA6B92C297F39830080354B /* TransactionsViewModel.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		8AA6B92E297F3AD10080354B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8AA6B92F297F3ADB0080354B /* TranscationCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8AA6B931297F46A30080354B /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				8AA6B91D297F33750080354B /* JsonLoader.swift */,
+				8AA6B914297F322B0080354B /* PBTransactions.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,11 +239,16 @@
 			files = (
 				8AA6B918297F32BE0080354B /* NetworkManager.swift in Sources */,
 				8AA6B900297F30D30080354B /* AppDelegate.swift in Sources */,
+				8AA6B930297F3ADB0080354B /* TranscationCell.swift in Sources */,
 				8AA6B902297F30D30080354B /* SceneDelegate.swift in Sources */,
+				8AA6B92B297F393F0080354B /* TransactionCoordinator.swift in Sources */,
 				8AA6B91E297F33750080354B /* JsonLoader.swift in Sources */,
 				8AA6B922297F33D70080354B /* NetworkAppError.swift in Sources */,
+				8AA6B92D297F39830080354B /* TransactionsViewModel.swift in Sources */,
 				8AA6B91B297F33130080354B /* TransactionDataModel.swift in Sources */,
 				8AA6B920297F33940080354B /* Data+Ext.swift in Sources */,
+				8AA6B925297F38D90080354B /* ApplicationCoordinator.swift in Sources */,
+				8AA6B928297F39210080354B /* TransactionsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -310,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
