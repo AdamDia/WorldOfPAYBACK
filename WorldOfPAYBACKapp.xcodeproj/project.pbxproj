@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		8AA6B900297F30D30080354B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B8FF297F30D30080354B /* AppDelegate.swift */; };
 		8AA6B902297F30D30080354B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B901297F30D30080354B /* SceneDelegate.swift */; };
-		8AA6B904297F30D30080354B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B903297F30D30080354B /* ViewController.swift */; };
-		8AA6B907297F30D30080354B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA6B905297F30D30080354B /* Main.storyboard */; };
 		8AA6B909297F30D40080354B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA6B908297F30D40080354B /* Assets.xcassets */; };
 		8AA6B90C297F30D40080354B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA6B90A297F30D40080354B /* LaunchScreen.storyboard */; };
+		8AA6B915297F322B0080354B /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AA6B914297F322B0080354B /* PBTransactions.json */; };
+		8AA6B918297F32BE0080354B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B917297F32BE0080354B /* NetworkManager.swift */; };
+		8AA6B91B297F33130080354B /* TransactionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B91A297F33130080354B /* TransactionDataModel.swift */; };
+		8AA6B91E297F33750080354B /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B91D297F33750080354B /* JsonLoader.swift */; };
+		8AA6B920297F33940080354B /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B91F297F33940080354B /* Data+Ext.swift */; };
+		8AA6B922297F33D70080354B /* NetworkAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6B921297F33D70080354B /* NetworkAppError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8AA6B8FC297F30D30080354B /* WorldOfPAYBACKapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACKapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA6B8FF297F30D30080354B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AA6B901297F30D30080354B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8AA6B903297F30D30080354B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8AA6B906297F30D30080354B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AA6B908297F30D40080354B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AA6B90B297F30D40080354B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AA6B90D297F30D40080354B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AA6B914297F322B0080354B /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PBTransactions.json; sourceTree = "<group>"; };
+		8AA6B917297F32BE0080354B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8AA6B91A297F33130080354B /* TransactionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDataModel.swift; sourceTree = "<group>"; };
+		8AA6B91D297F33750080354B /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
+		8AA6B91F297F33940080354B /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
+		8AA6B921297F33D70080354B /* NetworkAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		8AA6B8FE297F30D30080354B /* WorldOfPAYBACKapp */ = {
 			isa = PBXGroup;
 			children = (
-				8AA6B8FF297F30D30080354B /* AppDelegate.swift */,
-				8AA6B901297F30D30080354B /* SceneDelegate.swift */,
-				8AA6B903297F30D30080354B /* ViewController.swift */,
-				8AA6B905297F30D30080354B /* Main.storyboard */,
-				8AA6B908297F30D40080354B /* Assets.xcassets */,
-				8AA6B90A297F30D40080354B /* LaunchScreen.storyboard */,
-				8AA6B90D297F30D40080354B /* Info.plist */,
+				8AA6B913297F31DB0080354B /* Resources */,
+				8AA6B919297F32F70080354B /* DataModel */,
+				8AA6B91C297F333E0080354B /* Helper + Extensions */,
+				8AA6B916297F32B20080354B /* Network */,
 			);
 			path = WorldOfPAYBACKapp;
+			sourceTree = "<group>";
+		};
+		8AA6B913297F31DB0080354B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AA6B90D297F30D40080354B /* Info.plist */,
+				8AA6B8FF297F30D30080354B /* AppDelegate.swift */,
+				8AA6B901297F30D30080354B /* SceneDelegate.swift */,
+				8AA6B908297F30D40080354B /* Assets.xcassets */,
+				8AA6B90A297F30D40080354B /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8AA6B916297F32B20080354B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8AA6B914297F322B0080354B /* PBTransactions.json */,
+				8AA6B917297F32BE0080354B /* NetworkManager.swift */,
+				8AA6B921297F33D70080354B /* NetworkAppError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8AA6B919297F32F70080354B /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				8AA6B91A297F33130080354B /* TransactionDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		8AA6B91C297F333E0080354B /* Helper + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8AA6B91D297F33750080354B /* JsonLoader.swift */,
+				8AA6B91F297F33940080354B /* Data+Ext.swift */,
+			);
+			path = "Helper + Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA6B90C297F30D40080354B /* LaunchScreen.storyboard in Resources */,
+				8AA6B915297F322B0080354B /* PBTransactions.json in Resources */,
 				8AA6B909297F30D40080354B /* Assets.xcassets in Resources */,
-				8AA6B907297F30D30080354B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +182,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA6B904297F30D30080354B /* ViewController.swift in Sources */,
+				8AA6B918297F32BE0080354B /* NetworkManager.swift in Sources */,
 				8AA6B900297F30D30080354B /* AppDelegate.swift in Sources */,
 				8AA6B902297F30D30080354B /* SceneDelegate.swift in Sources */,
+				8AA6B91E297F33750080354B /* JsonLoader.swift in Sources */,
+				8AA6B922297F33D70080354B /* NetworkAppError.swift in Sources */,
+				8AA6B91B297F33130080354B /* TransactionDataModel.swift in Sources */,
+				8AA6B920297F33940080354B /* Data+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8AA6B905297F30D30080354B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AA6B906297F30D30080354B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8AA6B90A297F30D40080354B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +329,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XHKRMS9TZN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WorldOfPAYBACKapp/Info.plist;
+				INFOPLIST_FILE = WorldOfPAYBACKapp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +342,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.adam.WorldOfPAYBACKapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +360,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XHKRMS9TZN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WorldOfPAYBACKapp/Info.plist;
+				INFOPLIST_FILE = WorldOfPAYBACKapp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +373,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.adam.WorldOfPAYBACKapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
