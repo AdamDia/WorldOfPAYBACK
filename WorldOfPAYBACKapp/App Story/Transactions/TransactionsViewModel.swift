@@ -63,7 +63,7 @@ final class TransactionsViewModel: ObservableObject {
                 case .invalidData:
                     self.alertItem = AlertItemExt.customAlert(type: .invalidData)
                 case .noNetwork:
-                    self.alertItem = AlertItemExt.customAlert(type: .unableToComplete, action: {
+                    self.alertItem = AlertItemExt.customAlert(type: .noNetwork, action: {
                         self.reload = true
                     })
                 }

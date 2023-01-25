@@ -24,7 +24,7 @@ extension JsonLoader {
         
         do {
             let data = try Data(contentsOf: path)
-            print(data.jsonToString())
+//            print(data.jsonToString())
             let decodedObject = try JSONDecoder().decode(T.self, from: data)
             completion(.success(decodedObject))
         } catch {

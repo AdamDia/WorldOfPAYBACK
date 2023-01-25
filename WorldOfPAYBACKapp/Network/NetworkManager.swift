@@ -21,7 +21,6 @@ final class NetworkManager: NetworkManagerProtocol, JsonLoader {
         
         if Reachability.isConnectedToNetwork() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1){ [weak self] in
-                
                 if Double(randomValue) / 100 < probability {
                     completed(.failure(.unableToComplete))
                 } else {
