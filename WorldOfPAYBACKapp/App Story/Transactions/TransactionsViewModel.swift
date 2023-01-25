@@ -8,7 +8,7 @@
 import Foundation
 
 final class TransactionsViewModel: ObservableObject {
-    private var transactions: [TransactionItem] = []
+    var transactions: [TransactionItem] = []
     private var networkManager: NetworkManagerProtocol
     weak var transactionsCoordinator: TransactionsCoordinator?
     
@@ -17,7 +17,8 @@ final class TransactionsViewModel: ObservableObject {
     
     @Published var isLoading = false
     @Published var filterType: FilterType = .none
-    
+    @Published var alertItem: AlertItemExt?
+    @Published var reload: Bool = false
     
     var filteredTransactions: [TransactionItem] {
         switch filterType {
@@ -45,7 +46,7 @@ final class TransactionsViewModel: ObservableObject {
         self.networkManager = networkManager
     }
     
-    private func getTransactions() {
+     func getTransactions() {
         isLoading = true
         networkManager.getTransactions{ [weak self] result in
             guard let self = self else { return }
@@ -54,7 +55,18 @@ final class TransactionsViewModel: ObservableObject {
             case .success(let transactions):
                 self.transactions = transactions.sorted(by: {$0.transactionDetail.bookingDate.compare($1.transactionDetail.bookingDate) == .orderedDescending})
             case .failure(let error):
-                print(error.localizedDescription)
+                switch error {
+                case .unableToComplete:
+                    self.alertItem = AlertItemExt.customAlert(type: .unableToComplete, action: {
+                        self.reload = true
+                    })
+                case .invalidData:
+                    self.alertItem = AlertItemExt.customAlert(type: .invalidData)
+                case .noNetwork:
+                    self.alertItem = AlertItemExt.customAlert(type: .unableToComplete, action: {
+                        self.reload = true
+                    })
+                }
             }
         }
     }

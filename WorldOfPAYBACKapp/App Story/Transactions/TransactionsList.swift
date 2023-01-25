@@ -41,6 +41,20 @@ struct TransactionsList: View {
             .sheet(isPresented: $isSheetPresented) {
                 FilterCategoryView(viewModel: viewModel, isSheetPresented: $isSheetPresented, currentSelectedFilter: $currentSelectedFilter)
             }
+            .alert(item: $viewModel.alertItem) { alertItem in
+                var alert: Alert
+                if let action = alertItem.actionButton {
+                    alert = Alert(title: alertItem.title, message: alertItem.message, primaryButton: action, secondaryButton: alertItem.dismissButton!)
+                } else {
+                    alert = Alert(title: alertItem.title, message: alertItem.message,dismissButton: alertItem.dismissButton)
+                }
+                return alert
+            } .onReceive(viewModel.$reload) { reload in
+                if reload {
+                    viewModel.getTransactions()
+                }
+            }
+            
             if viewModel.isLoading {LoadingView()}
         }
     }
