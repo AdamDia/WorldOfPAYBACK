@@ -23,4 +23,10 @@ class TransactionsCoordinator: Coordinator {
         rootViewController.navigationBar.prefersLargeTitles = true
         rootViewController.navigationBar.tintColor = UIColor.black
     }
+    
+    func gotDetailsScreen(transaction: TransactionItem) {
+        let detailsVC = TransactionDetails(transaction: transaction)
+        detailsVC.title = "Details"
+        rootViewController.pushViewController(detailsVC, animated: true)
+    }
 }

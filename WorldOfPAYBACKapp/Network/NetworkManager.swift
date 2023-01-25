@@ -16,12 +16,14 @@ protocol NetworkManagerProtocol {
 
 final class NetworkManager: NetworkManagerProtocol, JsonLoader {
     func getTransactions(completed: @escaping getTransactionsCompleted) {
-        loadJSON(filename: "PBTransactions", type: TransactionsDataModel.self) { result in
-            switch result {
-            case .success(let data):
-                completed(.success(data.items))
-            case .failure(_):
-                completed(.failure(.invalidData))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){ [weak self] in
+            self?.loadJSON(filename: "PBTransactions", type: TransactionsDataModel.self) { result in
+                switch result {
+                case .success(let data):
+                    completed(.success(data.items))
+                case .failure(_):
+                    completed(.failure(.invalidData))
+                }
             }
         }
     }

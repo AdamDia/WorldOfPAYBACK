@@ -12,12 +12,34 @@ struct TransactionsList: View {
     @ObservedObject var viewModel: TransactionsViewModel
     
     var body: some View {
-        List(viewModel.transactions) { transaction in
-            TransactionCell(transaction: transaction)
-        }
-        .navigationTitle("Transactions")
-        .onAppear {
-            viewModel.getTransactions()
+        ZStack {
+            List(viewModel.transactions) { transaction in
+                TransactionCell(transaction: transaction)
+                    .onTapGesture {
+                        viewModel.goToTransactionDetailDetails(transaction: transaction)
+                    }
+            }
+            .navigationTitle("Transactions")
+            .toolbar {
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        ///open filter screen
+                    } label: {
+                        FilterButton()
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading){
+                    Text("Sum \(viewModel.sumFilteredValues)")
+                }
+            }
+            .onAppear {
+                viewModel.fetchDataIfNeeded()
+                viewModel.shouldFetchData = false
+            }
+            
+            if viewModel.isLoading {LoadingView()}
         }
     }
 }
