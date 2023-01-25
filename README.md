@@ -3,6 +3,10 @@
 
 The application has two main screens. The first screen is a list view that displays transactions loaded from a local JSON file, with a navigation toolbar that contains a button and a label displaying the sum of all the transactions. The button opens a filter sheet that allows the user to filter the current transactions by category. The second screen is a details view that is displayed when the user taps on a specific transaction row in the list view. This screen provides more information about the selected transaction.
 
+## WireFrame
+
+<img width="1177" alt="WorldOfPAYBACK_Sketch" src="https://user-images.githubusercontent.com/50494822/214643784-fba22211-8508-43c3-a38e-a348d7b6fadd.png">
+
 
 ## Tech Specifications
 
