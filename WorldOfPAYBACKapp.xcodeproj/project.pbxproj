@@ -77,6 +77,7 @@
 		8AA6B957298190C90080354B /* TransactionsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TransactionsMock.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		8AA6B959298191610080354B /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		8AA6B95B298192E20080354B /* TransactionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModelTests.swift; sourceTree = "<group>"; };
+		8AA6B95D2981A0D70080354B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +101,7 @@
 		8AA6B8F3297F30D30080354B = {
 			isa = PBXGroup;
 			children = (
+				8AA6B95D2981A0D70080354B /* README.md */,
 				8AA6B8FE297F30D30080354B /* WorldOfPAYBACKapp */,
 				8AA6B94D29818DF70080354B /* WorldOfPAYBACKappTests */,
 				8AA6B8FD297F30D30080354B /* Products */,
