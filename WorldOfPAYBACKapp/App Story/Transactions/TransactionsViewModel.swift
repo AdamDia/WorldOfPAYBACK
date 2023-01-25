@@ -8,14 +8,38 @@
 import Foundation
 
 final class TransactionsViewModel: ObservableObject {
-    
-    var transactions: [TransactionItem] = []
+    private var transactions: [TransactionItem] = []
     private var networkManager: NetworkManagerProtocol
     weak var transactionsCoordinator: TransactionsCoordinator?
+    
     var shouldFetchData = true
     var sumFilteredValues = 0
     
     @Published var isLoading = false
+    @Published var filterType: FilterType = .none
+    
+    
+    var filteredTransactions: [TransactionItem] {
+        switch filterType {
+        case .none:
+            let array = transactions
+            sumFilteredValues = array.map{$0.transactionDetail.value.amount}.reduce(0, +)
+            return array
+        case .categoryOne:
+            let array =  transactions.filter{$0.category == 1}
+            sumFilteredValues = array.map{$0.transactionDetail.value.amount}.reduce(0, +)
+            return array
+        case .categoryTwo:
+            let array = transactions.filter{$0.category == 2}
+            sumFilteredValues = array.map{$0.transactionDetail.value.amount}.reduce(0, +)
+            return array
+        }
+    }
+    
+    func updateFilter(to category: FilterType) {
+        filterType = category
+    }
+    
     
     init(networkManager: NetworkManagerProtocol) {
         self.networkManager = networkManager

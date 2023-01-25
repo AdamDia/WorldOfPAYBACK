@@ -10,10 +10,12 @@ import SwiftUI
 struct TransactionsList: View {
     
     @ObservedObject var viewModel: TransactionsViewModel
+    @State private var isSheetPresented = false
+    @State private var currentSelectedFilter: String? = nil
     
     var body: some View {
         ZStack {
-            List(viewModel.transactions) { transaction in
+            List(viewModel.filteredTransactions) { transaction in
                 TransactionCell(transaction: transaction)
                     .onTapGesture {
                         viewModel.goToTransactionDetailDetails(transaction: transaction)
@@ -21,15 +23,13 @@ struct TransactionsList: View {
             }
             .navigationTitle("Transactions")
             .toolbar {
-                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        ///open filter screen
+                        self.isSheetPresented = true
                     } label: {
                         FilterButton()
                     }
                 }
-                
                 ToolbarItem(placement: .navigationBarLeading){
                     Text("Sum \(viewModel.sumFilteredValues)")
                 }
@@ -38,7 +38,9 @@ struct TransactionsList: View {
                 viewModel.fetchDataIfNeeded()
                 viewModel.shouldFetchData = false
             }
-            
+            .sheet(isPresented: $isSheetPresented) {
+                FilterCategoryView(viewModel: viewModel, isSheetPresented: $isSheetPresented, currentSelectedFilter: $currentSelectedFilter)
+            }
             if viewModel.isLoading {LoadingView()}
         }
     }

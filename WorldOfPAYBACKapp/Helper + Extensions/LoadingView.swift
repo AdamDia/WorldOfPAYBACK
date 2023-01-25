@@ -13,9 +13,12 @@ struct LoadingView: View {
         ZStack {
             Color(.systemBackground).edgesIgnoringSafeArea(.all)
             
-            ProgressView()
-                .progressViewStyle(CircularProgressViewStyle(tint: .black))
-                .scaleEffect(2)
+            VStack(spacing: 20.0){
+                ProgressView()
+                    .progressViewStyle(.circular)
+                    .scaleEffect(2)
+                Text("Loading Transactions...")
+            }
         }
     }
 }

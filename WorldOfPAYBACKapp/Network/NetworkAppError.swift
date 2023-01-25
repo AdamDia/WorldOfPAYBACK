@@ -8,8 +8,7 @@
 import Foundation
 
 enum NetworkAppError: String, Error {
-    case invalidURL = "invalid URL"
     case unableToComplete = "unable To Complete request"
-    case invalidResponse = "invalid response"
     case invalidData = "invalid data"
+    case noNetwork = "No Network"
 }

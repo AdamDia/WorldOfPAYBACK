@@ -21,12 +21,13 @@ class TransactionsCoordinator: Coordinator {
     func start() {
         rootViewController.setViewControllers([UIHostingController(rootView: transactionsList)], animated: false)
         rootViewController.navigationBar.prefersLargeTitles = true
-        rootViewController.navigationBar.tintColor = UIColor.black
+        rootViewController.navigationBar.tintColor = UIColor.label
     }
     
     func gotDetailsScreen(transaction: TransactionItem) {
         let detailsVC = TransactionDetails(transaction: transaction)
         detailsVC.title = "Details"
+        detailsVC.overrideUserInterfaceStyle = .dark
         rootViewController.pushViewController(detailsVC, animated: true)
     }
 }
